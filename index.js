@@ -35,11 +35,11 @@ mongoose
   )
   .then(() => console.log('Connected DATABASE!'))
   .catch(() => console.log(' connection failed'));
-
-const port = 3001;
 app.get('/', (req, res) => {
   res.send('hello api');
 });
+const port = 3001;
+
 app.listen(port, () => {
   console.log('this server has been started ');
 });
