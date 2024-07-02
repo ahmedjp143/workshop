@@ -36,7 +36,7 @@ mongoose
   .then(() => console.log('Connected DATABASE!'))
   .catch(() => console.log(' connection failed'));
 app.get('/', (req, res) => {
-  res.send('hello api');
+  res.json('hello api');
 });
 const port = 3001;
 
