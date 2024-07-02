@@ -11,17 +11,17 @@ const apiotmnetrouter = require('./router/apiontmentrouter');
 const userrouter = require('./router/userrouter');
 app.use(express.json());
 app.use('/user', userrouter);
-app.use((req, res, next) => {
-  try {
-    const token = req.headers['token'];
-    if (!token)
-      return res.send({ message: 'raali noqo ogolaasho uma heesatid' });
-    const userverivy = jwt.verify(token, 'apiontment');
-    next();
-  } catch (error) {
-    res.send(error.message);
-  }
-});
+// app.use((req, res, next) => {
+//   try {
+//     const token = req.headers['token'];
+//     if (!token)
+//       return res.send({ message: 'raali noqo ogolaasho uma heesatid' });
+//     const userverivy = jwt.verify(token, 'apiontment');
+//     next();
+//   } catch (error) {
+//     res.send(error.message);
+//   }
+// });
 
 app.use('/test', testrouter);
 app.use('/patient', patientRouter);
